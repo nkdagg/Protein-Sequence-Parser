@@ -1,5 +1,5 @@
 # Protein-Sequence-Parser
-Parser has to convert a protein sequence of various lenght and consisting of 21 kind of characters (amino-acids) into a vector of frequencies where each character has frequencies attached to it on it's position in the sequence string.
+Parser has to convert a protein sequence of various lenght and consisting of 25 kind of characters (amino-acids) into a vector of frequencies where each character has frequencies attached to it on it's position in the sequence string.
 
 Secondary structure, occurs when the sequence of amino acids are linked by hydrogen bonds, which are responsible for protein bending, and forming shapes such as alpha-helixes and beta-sheets. These shapes form the secondary protein structures. This structure is dependant on order of residues in the protein. Ternary structure is the further order of the protein, depending on it, secondary form forms a globule or general view of the protein molecule. 
 
