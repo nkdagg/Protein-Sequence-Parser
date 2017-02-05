@@ -10,7 +10,7 @@ import java.util.Hashtable;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-
+        // FIXME: Main class may be redundant at this stage, turn it into a runner?
         String sequence = "";
         String proteinDetails = "";
         Hashtable<String, String> proteins = new Hashtable<>();

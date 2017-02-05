@@ -12,38 +12,42 @@ import java.util.Hashtable;
  */
 public class Parser {
 
-    String inputfilename;
-    String testDatasetFilename = "test.dataset";
-    String trainingDatasetFilename = "train.dataset";
-    Hashtable<String, String> proteins = new Hashtable<>();
+    private String inputfilename;
+    private String testDatasetFilename = "test.dataset";
+    private String trainingDatasetFilename = "train.dataset";
+    private Hashtable<String, String> proteins = new Hashtable<>();
+    private ArrayList<Entry> entries = new ArrayList<>();
 
-    Parser(String inputFilename){
+    Parser(String inputFilename) {
         // Create a default out/file
         this.inputfilename = inputFilename;
         readfile();
     }
 
-    Parser(){
+    // TODO: Try to parse on creation of parser object?
+    Parser() {
         readfile();
     }
 
-    ArrayList<String> readfile(){
+    ArrayList<String> readfile() {
         String thisLine = null;
+        // FIXME: Ordered HashSet instead?
         ArrayList<String> fileLines = new ArrayList<>();
 
         try {
+            // FIXME: output has to go to a different method.
             // open input file 5sequences.txt for reading and create out.txt for output.
             BufferedReader br = new BufferedReader(new FileReader("src/5sequences.txt"));
-            BufferedWriter wr = new BufferedWriter(new FileWriter("src/out.txt"));
+            //BufferedWriter wr = new BufferedWriter(new FileWriter("src/out.txt"));
 
-            String details ="";
+            String details = "";
             String sequence = "";
 
             while ((thisLine = br.readLine()) != null) {
-
-                if(thisLine.contains(">")){
-                    if(!sequence.isEmpty()) {
-                        proteins.put(details,sequence);
+                if (thisLine.contains(">")) {
+                    if (!sequence.isEmpty()) {
+                        entries.add(new Entry(details,sequence));
+                        proteins.put(details, sequence);
                         sequence = "";
                     }
                     details = thisLine;
@@ -52,36 +56,21 @@ public class Parser {
                 }
                 fileLines.add(thisLine);
             }
-            proteins.put(details,sequence);
+            entries.add(new Entry(details, sequence));
+            proteins.put(details, sequence);
         } catch (Exception e) {
             e.printStackTrace();
         }
         return fileLines;
     }
 
-    void parse(ArrayList<String> list){
-        for(String elt: list){
-            if(elt.contains(">")){
-
-            } else {
-
-            }
-        }
-    }
+    //TODO: method to output every N-th entry to test.dataset
 
 
     public static void main(String[] args) {
         Parser parserr = new Parser("yay");
         parserr.readfile();
 
-
-        for(String key: parserr.proteins.keySet()){
-            System.out.println(key);
-        }
-
-        for(String key: parserr.proteins.values()){
-            System.out.println(key);
-        }
     }
-    
+
 }
