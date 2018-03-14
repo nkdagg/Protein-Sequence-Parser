@@ -1,6 +1,6 @@
 package com.company;
 
-import com.sun.org.apache.xpath.internal.SourceTree;
+//import com.sun.org.apache.xpath.internal.SourceTree;
 
 import java.io.*;
 import java.util.Hashtable;
@@ -10,7 +10,7 @@ import java.util.Hashtable;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        // FIXME: Main class may be redundant at this stage, turn it into a runner?
+//        // FIXME: Main class may be redundant at this stage, turn it into a runner?
         String sequence = "";
         String proteinDetails = "";
         Hashtable<String, String> proteins = new Hashtable<>();
@@ -33,15 +33,13 @@ public class Main {
                     }
                 } else {
                     sequence += thisLine;
-
                 }
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-
-        System.out.println("Printing keys");
+        System.out.println("Printing keys :");
 
         for(String key: proteins.keySet()){
             System.out.println(key);
@@ -53,11 +51,7 @@ public class Main {
             System.out.println(key);
             System.out.println();
         }
-
-
     }
-
-
 }
 
 
