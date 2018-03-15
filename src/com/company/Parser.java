@@ -27,7 +27,6 @@ public class Parser {
         readfile();
     }
 
-    // TODO: Try to parse on creation of parser object?
     Parser() {
         readfile();
     }
@@ -126,11 +125,9 @@ public class Parser {
         }
     }
 
-    void writeToFile(int everyNthSequenceGoesToTest) {
+    void writeToFile(boolean crossValidation) {
 
     }
-
-    //TODO: method to output every N-th entry to test.dataset
 
 
     public static void main(String[] args) {

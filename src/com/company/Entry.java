@@ -23,11 +23,6 @@ public class Entry {
     private HashMap<Character, Integer> stat = new HashMap<>();
     private int[] statistic = new int[24]; // Per entry statistic of character occurences
 
-    //Init Statistic array
-
-
-    // Parse all of these details. pack them into a list.
-
     Entry() {
 
     }
@@ -48,33 +43,6 @@ public class Entry {
         this.charClass = group.charAt(0);
         //System.out.println(this.proteinClass);
         switch (charClass) {
-//            case 49 :
-//                this.numClass = 1;
-//                break;
-//            case 50 :
-//                this.numClass = 2;
-//                break;
-//            case 51 :
-//                this.numClass = 3;
-//                break;
-//            case 52 :
-//                this.numClass = 4;
-//                break;
-//            case 53 :
-//                this.numClass = 5;
-//                break;
-//            case 54 :
-//                this.numClass = 6;
-//                break;
-//            case 55 :
-//                this.numClass = 7;
-//                break;
-//            case 58 :
-//                this.numClass = 8;
-//                break;
-//            case 59 :
-//                this.numClass = 9;
-//                break;
             case 97 :
                 this.numClass = 0;
                 break;
@@ -109,8 +77,6 @@ public class Entry {
                 System.out.println("Error in constructor, undefined sequence class");
         }
 //        System.out.println(this.proteinClass);
-
-//FIXME: Do entry class in words and name need to be interpreted?
 
         this.taxID = topSplit[topSplit.length - 1].replaceAll("[^0-9]+", "");
 //        System.out.println(this.taxID);
@@ -260,112 +226,11 @@ public class Entry {
                     break;
                 default:
                     break;
-//                case 'a':
-//                    sb.append("1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 "); break;
-//                case 'b':
-//                    sb.append("0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 "); break;
-//                case 'c':
-//                    sb.append("0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 "); break;
-//                case 'd':
-//                    sb.append("0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 "); break;
-//                case 'e':
-//                    sb.append("0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 "); break;
-//                case 'f':
-//                    sb.append("0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 "); break;
-//                case 'g':
-//                    sb.append("0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 "); break;
-//                case 'h':
-//                    sb.append("0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 "); break;
-//                case 'i':
-//                    sb.append("0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 "); break;
-//                case 'k':
-//                    sb.append("0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 "); break;
-//                case 'l':
-//                    sb.append("0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 "); break;
-//                case 'm':
-//                    sb.append("0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 "); break;
-//                case 'n':
-//                    sb.append("0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 "); break;
-//                case 'p':
-//                    sb.append("0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 "); break;
-//                case 'q':
-//                    sb.append("0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 "); break;
-//                case 'r':
-//                    sb.append("0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 "); break;
-//                case 's':
-//                    sb.append("0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 "); break;
-//                case 't':
-//                    sb.append("0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 "); break;
-//                case 'u':
-//                    sb.append("0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 "); break;
-//                case 'v':
-//                    sb.append("0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 "); break;
-//                case 'w':
-//                    sb.append("0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 "); break;
-//                case 'x':
-//                    sb.append("0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 "); break;
-//                case 'y':
-//                    sb.append("0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 "); break;
-//                case 'z':
-//                    sb.append("0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 "); break;
-//                default:
-//                    break;
-//                case 'a':
-//                    encodedString += "1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ");
-//                case 'b':
-//                    encodedString += "0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ";
-//                case 'c':
-//                    encodedString += "0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ";
-//                case 'd':
-//                    encodedString += "0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ";
-//                case 'e':
-//                    encodedString += "0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ";
-//                case 'f':
-//                    encodedString += "0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ";
-//                case 'g':
-//                    encodedString += "0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ";
-//                case 'h':
-//                    encodedString += "0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ";
-//                case 'i':
-//                    encodedString += "0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ";
-//                case 'k':
-//                    encodedString += "0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ";
-//                case 'l':
-//                    encodedString += "0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 ";
-//                case 'm':
-//                    encodedString += "0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 ";
-//                case 'n':
-//                    encodedString += "0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 ";
-//                case 'p':
-//                    encodedString += "0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 ";
-//                case 'q':
-//                    encodedString += "0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 ";
-//                case 'r':
-//                    encodedString += "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 ";
-//                case 's':
-//                    encodedString += "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 ";
-//                case 't':
-//                    encodedString += "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 ";
-//                case 'u':
-//                    encodedString += "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 ";
-//                case 'v':
-//                    encodedString += "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 ";
-//                case 'w':
-//                    encodedString += "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 ";
-//                case 'x':
-//                    encodedString += "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 ";
-//                case 'y':
-//                    encodedString += "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 ";
-//                case 'z':
-//                    encodedString += "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 ";
             }
             encodedString = sb.toString();
         }
     }
 
-    void getCode() {
-
-    }
 
     String entryToString() {
         // For each entry:
