@@ -1,9 +1,6 @@
 package com.company;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileReader;
-import java.io.FileWriter;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Hashtable;
@@ -275,7 +272,23 @@ public class Parser {
         }
     }
 
+    void writeFrequenciesToFile(){
+        // Create CSV with Stats of Amino acid Frequencies
 
+        try {
+            BufferedWriter wrStats = new BufferedWriter(new FileWriter("src/stats.csv"));
+
+
+            //Write stats to file.
+
+
+            wrStats.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+    }
 
 
 
